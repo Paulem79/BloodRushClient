@@ -1,0 +1,26 @@
+﻿<Window x:Class="BloodRushClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BloodRushClient"
+        xmlns:emoji="clr-namespace:Emoji.Wpf;assembly=Emoji.Wpf"
+        mc:Ignorable="d"
+        FontSize="22"
+        Title="MainWindow" Height="540" Width="960">
+    <Grid Background="Black">
+        <Label Content="Chemin vers le répertoire de la démo (si besoin d'être différent)" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" Width="940"/>
+        <TextBox x:Name="steamPath" Margin="10,66,353,0" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" FontSize="18" Height="45"/>
+        <Button x:Name="browseFolderSteam" Content="Parcourir..." Margin="607,66,10,0" VerticalAlignment="Top" Click="browseFolderSteam_Click" Height="45"/>
+
+        <Label Content="Choisir la version" HorizontalAlignment="Left" Margin="10,168,0,0" VerticalAlignment="Top" Width="354"/>
+        <ComboBox x:Name="comboBox1" Margin="10,207,596,0" VerticalAlignment="Top" Height="42"/>
+
+        <Label Content="Ajouter des mods" HorizontalAlignment="Left" Margin="10,286,0,0" VerticalAlignment="Top" Width="354"/>
+        <Button x:Name="znsMods" HorizontalAlignment="Left" Margin="10,329,0,0" VerticalAlignment="Top" Height="44" Width="354" Click="znsMods_Click">
+            <emoji:TextBlock Text="🧷 Par le magnifique ZNS"/>
+        </Button>
+
+        <Button x:Name="button1" Content="Lancer" Margin="0,0,0,10" Click="button1_Click" Background="#FF2D2D2D" HorizontalAlignment="Center" Width="276" Height="56" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>
