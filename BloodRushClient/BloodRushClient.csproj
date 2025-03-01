@@ -52,7 +52,7 @@
     </Reference>
     <Reference Include="PresentationFramework.Aero2" />
     <Reference Include="SevenZipExtractor">
-      <HintPath>..\..\..\..\source\repos\SevenZipExtractor\SevenZipExtractor\bin\Debug\netstandard2.0\SevenZipExtractor.dll</HintPath>
+      <HintPath>..\libs\SevenZipExtractor.dll</HintPath>
     </Reference>
     <Reference Include="Stfu, Version=0.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Stfu.0.1.1\lib\net40\Stfu.dll</HintPath>

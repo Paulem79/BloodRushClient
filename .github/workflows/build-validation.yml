@@ -35,3 +35,29 @@ jobs:
       with:
         name: Build
         path: "./_build"
+  
+  publish:
+    name: 🚀 Publish
+    runs-on: ubuntu-latest
+    permissions: write-all
+    needs: build
+    if: success()
+    steps:
+      - name: ✅ Checkout repository
+        uses: actions/checkout@v4
+
+      - name: ✅ Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: Build
+          path: "./_build"
+
+      - name: 🔁 Generate as development build
+        uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "dev"
+          prerelease: true
+          title: "Development Build"
+          files: |
+            ./_build/*.exe
