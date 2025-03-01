@@ -1,4 +1,4 @@
-name: Build
+name: Build & Publish
 
 on:
   push:
@@ -10,31 +10,33 @@ on:
 
 jobs:
   build:
+    name: 🔨 Build
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: ✅ Checkout repository
+      uses: actions/checkout@v4
     
-    - name: Setup MSBuild
+    - name: 🆙 Setup MSBuild
       uses: microsoft/setup-msbuild@v2
 
-    - name: Setup NuGet
+    - name: 🆙 Setup NuGet
       uses: NuGet/setup-nuget@v2.0.1
       
-    - name: Navigate to Workspace
+    - name: 🧷 Navigate to Workspace
       run: cd $GITHUB_WORKSPACE
 
-    - name: Create Build Directory
+    - name: 🪄 Create Build Directory
       run: mkdir build
       
-    - name: Restore Packages
+    - name: 🔁 Restore Packages
       run: nuget restore BloodRushClient.sln
 
-    - name: Build Solution
+    - name: 🔨 Build Solution
       run: |
         msbuild.exe BloodRushClient.sln /p:DeleteExistingFiles=True /p:platform="Any CPU" /p:configuration="Release"
         
-    - name: Upload artifact
+    - name: ⬆️ Upload artifact
       uses: actions/upload-artifact@v4
       with:
         name: Build
@@ -42,7 +44,7 @@ jobs:
   
   publish:
     name: 🚀 Publish
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     permissions: write-all
     needs: build
     if: success()

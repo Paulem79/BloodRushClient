@@ -1,18 +1,23 @@
 # BloodRushClient
 
-# 🇫🇷
+# <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/800px-Flag_of_France.svg.png" width=40> · Français
+---
 Un programme pour installer et lancer différentes versions de Bloodrush, un jeu par MaxEstLa.
 
 [Téléchargez la dernière version ici](https://github.com/Paulem79/BloodRushClient/releases/latest)
+**Vous devez télécharger les deux fichiers, BloodRushClient.exe et BloodRushClient.exe.config !**
+
 
 ### Requis :
 - Windows 7 32 bits ou plus
 **Votre antivirus peut le détecter comme un faux positif car le fichier n'est pas signé avec une licence Windows, de toute manière je n'ai pas l'argent pour l'acheter...**
 
-# 🇬🇧
+# <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/800px-Flag_of_the_United_States.svg.png" width=40> · Anglais
+---
 A simple GUI to install and launch multiple versions of BloodRush, a game by MaxEstLa
 
 [Download latest here](https://github.com/Paulem79/BloodRushClient/releases/latest)
+**You must download the two files, BloodRushClient.exe and BloodRushClient.exe.config !**
 
 ### Required :
 - Windows 7 32 bits or more
