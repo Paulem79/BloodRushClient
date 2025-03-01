@@ -28,13 +28,13 @@ jobs:
 
     - name: Build Solution
       run: |
-        msbuild.exe BloodRushClient.sln /p:DeleteExistingFiles=True /p:platform="Any CPU" /p:configuration="Release" /p:PublishUrl="../build"
+        msbuild.exe BloodRushClient.sln /p:DeleteExistingFiles=True /p:platform="Any CPU" /p:configuration="Release""
         
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
         name: Build
-        path: "./build"
+        path: "./BloodRushClient/bin/Release"
   
   publish:
     name: 🚀 Publish
@@ -50,7 +50,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: Build
-          path: "./build"
+          path: "./BloodRushClient/bin/Release"
 
       - name: 🔁 Generate as development build
         uses: "marvinpinto/action-automatic-releases@latest"
@@ -60,4 +60,4 @@ jobs:
           prerelease: true
           title: "Development Build"
           files: |
-            ./build/*.exe
+            ./BloodRushClient/bin/Release/*.exe
