@@ -52,12 +52,13 @@ jobs:
           name: Build
           path: "./BloodRushClient/bin/Release"
 
-      - name: 🔁 Generate as development build
+      - name: 🔁 Generate as build
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "dev"
-          prerelease: true
-          title: "Development Build"
+          automatic_release_tag: "${{ github.run_number }}"
+          prerelease: false
+          title: "Build ${{ github.run_number }}"
           files: |
             ./BloodRushClient/bin/Release/*.exe
+            ./BloodRushClient/bin/Release/*.config

@@ -9,6 +9,7 @@ using System.Windows;
 using System.Configuration;
 using System.Collections.Specialized;
 using static System.Windows.Forms.AxHost;
+using System.Reflection;
 
 namespace BloodRushClient
 {
@@ -144,7 +145,6 @@ namespace BloodRushClient
             KeyValueConfigurationCollection confCollection = configManager.AppSettings.Settings;
 
             confCollection["steamPath"].Value = directory;
-
 
             configManager.Save(ConfigurationSaveMode.Modified);
             ConfigurationManager.RefreshSection(configManager.AppSettings.SectionInformation.Name);

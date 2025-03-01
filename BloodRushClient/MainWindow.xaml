@@ -7,9 +7,9 @@
         xmlns:emoji="clr-namespace:Emoji.Wpf;assembly=Emoji.Wpf"
         mc:Ignorable="d"
         FontSize="22"
-        Title="MainWindow" Height="540" Width="960">
+        Title="Bloodrush Client" Height="540" Width="960">
     <Grid Background="Black">
-        <Label Content="Chemin vers le répertoire de la démo (si besoin d'être différent)" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" Width="940"/>
+        <Label Content="Chemin vers le répertoire de la démo Steam" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" Width="940"/>
         <TextBox x:Name="steamPath" Margin="10,66,353,0" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" FontSize="18" Height="45"/>
         <Button x:Name="browseFolderSteam" Content="Parcourir..." Margin="607,66,10,0" VerticalAlignment="Top" Click="browseFolderSteam_Click" Height="45"/>
 

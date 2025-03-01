@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BloodRushClient"
         mc:Ignorable="d"
-        Title="DownloadPopup" Height="450" Width="800">
+        Title="Téléchargement..." Height="450" Width="800">
     <Grid Background="Black">
         <Label x:Name="informations" Content="Veuillez patienter..." HorizontalContentAlignment="Center" Margin="10,0,10,0" Width="780" VerticalAlignment="Center" FontSize="22"/>
         <Label x:Name="label1" Content="Veuillez patienter..." HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,65,0,0" VerticalAlignment="Top" FontSize="22" Width="780"/>
