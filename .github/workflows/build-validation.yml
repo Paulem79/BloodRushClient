@@ -15,7 +15,7 @@ jobs:
 
     steps:
     - name: ✅ Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
     
     - name: 🆙 Setup MSBuild
       uses: microsoft/setup-msbuild@v2
@@ -50,7 +50,7 @@ jobs:
     if: success()
     steps:
       - name: ✅ Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: ✅ Download build artifacts
         uses: actions/download-artifact@v5
